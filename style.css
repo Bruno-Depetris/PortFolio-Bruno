@@ -1,0 +1,210 @@
+body {
+    background-color: rgb(31, 30, 30);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: whitesmoke;
+    padding: 3%;
+}
+/* Oculta el scrollbar */
+::-webkit-scrollbar {
+    overflow: hidden;
+}
+
+header {
+    display: grid;
+    grid-template-columns: 0.2fr 1fr;
+    gap: 10px;
+    padding: 20px;
+}
+
+.presentacion {
+    width: 100%;
+    transition: all 1s;
+
+}
+.presentacion h1{
+    transition: all 1s;
+}
+
+
+.contacto {
+    position: relative;
+    width: 100%;
+    text-align: center;
+
+}
+
+.foto-perfil {
+    border-radius: 100%;
+    width: 200px;
+    height: 200px;
+    transition: all 1s;
+    box-shadow: none;
+}
+
+.contacto ul {
+    position: absolute;
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    right: 0px;
+    z-index: -1;
+    opacity: 0;
+    top: 50%;
+    transition: top 0.5s, opacity 0.2s;
+}
+
+.contacto ul li {
+    margin-right: 10px;
+    padding: 10px;
+
+}
+
+.contacto ul li a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+.contacto ul li a img {
+    width: 30px;
+}
+
+
+.contacto:hover .foto-perfil {
+    cursor: pointer;
+    width: 250px;
+    height: 250px;
+    box-shadow: 0px 10px 20px rgba(255, 255, 255, 0.2);
+    transition: all 0.5s ease;
+}
+
+.contacto:hover ul {
+    opacity: 1;
+    z-index: 1; 
+    top: 100%;
+}
+
+
+.contacto:hover ~ .presentacion p{
+    opacity: 0.7;
+}
+
+.contacto:hover ~ .presentacion h1{
+    opacity: 1;
+    color: rgb(4, 197, 204);
+}
+
+hr {
+    border: none;          
+    height: 1px;       
+    background-color: rgb(0, 183, 255);  
+    box-shadow: 1px 0px 10px rgb(0, 183, 255);
+}
+nav{
+    margin-top: 3%;
+}
+nav i{
+    color: rgb(4, 197, 204);
+}
+.skills{
+    position: relative;
+}
+.skills h3{
+    font-size: 150%;
+    color: rgb(0, 183, 255);  
+}
+
+.skills ul li{
+    font-size: 150%;
+    transition: all 1s;
+}
+.skills ul li:hover{
+    font-size: 160%;
+    color: rgb(0, 183, 255);  
+}
+
+
+.proyectos{
+    margin-top: 5%;
+    text-align: center;
+}
+
+.carousel {
+    position: relative;
+    width: 80%;
+    max-width: 600px;
+    margin: auto;
+    overflow: hidden;
+    border: 1px solid #ddd; /* Opcional: para resaltar el área del carrusel */
+}
+
+.carousel-slide {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-slide img,
+.carousel-slide video {
+    min-width: 100%;
+    height: auto;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    color: #333;
+    background: rgba(255, 255, 255, 0.8);
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1; /* Asegura que los botones estén sobre las imágenes */
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+
+footer {
+    color: white;
+    padding: 20px;
+
+    text-align: center;
+    margin: 0px;
+}
+footer ul {
+    list-style-type: none;
+
+}
+footer ul li{
+    display: inline;
+}
+footer h2{
+    text-align: center;
+    
+}
+footer img{
+    width: 5%;
+    transition: all 1s;
+    cursor: pointer;
+}
+footer img:hover{
+    width: 6%;
+    
+}
+
+@media (max-width: 768px) {
+    header {
+        grid-template-columns: 1fr;
+    }
+    .foto-perfil {
+        width: 150px;
+        height: 150px;
+    }
+}
